@@ -90,4 +90,12 @@
     - Khi nào sử dụng never? :
         + Hàm ném ra ngoại lệ: Khi một hàm luôn ném ra ngoại lệ và không bao giờ hoàn thành việc thực thi bình thường.
         + Hàm có vòng lặp vô tận: Khi một hàm có vòng lặp vô tận mà không có cách nào để thoát khỏi vòng lặp.
-        
+
+
+
+* Bài 18: TypeScript Union Type
+    - Trong TypeScript, Union Type cho phép một biến có thể có nhiều kiểu dữ liệu. Điều này rất hữu ích khi bạn muốn một biến có thể chứa giá trị thuộc nhiều kiểu khác nhau.
+    - Union Type được định nghĩa bằng cách sử dụng ký hiệu dấu gạch đứng (|). Ví dụ, nếu bạn muốn một biến có thể là string hoặc number, bạn có thể khai báo như sau:
+        + let value: string | number;
+
+
