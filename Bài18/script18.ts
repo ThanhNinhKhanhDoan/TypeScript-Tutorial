@@ -1,4 +1,4 @@
-function addNumberString(a: any, b: any) {
+function addNumberString(a: string | number | object | boolean, b: string | number | object | boolean) {
     if (typeof a === 'number' && typeof b === 'number') {
         return a + b;
     }
@@ -26,6 +26,10 @@ printId("abc123"); // Kết quả sẽ là "ID is a string: ABC123"
 
 // Gọi hàm với giá trị kiểu number
 printId(123);      // Kết quả sẽ là "ID is a number: 123"
+
+
+
+
 
 
 

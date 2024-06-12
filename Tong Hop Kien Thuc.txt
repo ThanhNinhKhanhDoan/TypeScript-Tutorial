@@ -99,3 +99,6 @@
         + let value: string | number;
 
 
+
+* Bài 19: TypeScript Type Aliases
+    - Định danh kiểu type theo cách mình mong muốn
