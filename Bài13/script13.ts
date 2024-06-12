@@ -1,0 +1,1 @@
+let skills: [string, number] = ["KD", 23]
