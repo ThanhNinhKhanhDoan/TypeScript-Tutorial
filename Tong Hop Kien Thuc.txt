@@ -1,0 +1,39 @@
+* Bài 3:
+    - Cách cài đặt và chạy file .ts (TypeScript)
+
+* Bài 4:
+    - Phân biệt giữa cách chạy Javascript và TypeScript.
+        + Javascript lúc code nếu có lỗi sẽ không báo lên code và lúc chạy nếu có lỗi mới báo
+        , còn TypeScript nếu trong lúc code có lỗi sẽ báo trực tiếp -> code TypeScript sẽ tiết kiệm
+        thời gian hơn
+
+* Bài 5:
+    - Khi chúng ta làm việc với thèn TypeScript chúng ta cần quan tâm đến kiểu dữ liệu là gì
+    nhờ có kiểu dữ liệu thì thèn TypeScript mới biết được rằng là chúng ta muốn sử dụng cái dữ liệu
+    đấy và chúng ta có bao nhiêu thuộc tính và chúng ta có những phương thức nào có sẵn
+    ứng với kiểu dữ liệu đấy.
+
+
+* Bài 6:
+    - Lúc khai báo biến:
+        + Biến let không cần gán giá trị trước, còn biến const bắt buộc phải gán giá trị khi khai báo
+
+
+
+* Bài 7:
+    - Bài này là TypeScript sẽ tự động gán kiểu dữ liệu cho chúng ta
+
+
+* Bài 8:
+    - Hướng dẫn cách sử dụng dấu nháy
+
+
+* Bài 11:
+    - Để khai báo TypeScript là 1 object ta cần dấu 2 chấm và kiểu dữ liệu hình thành cho nó và đồng thời sẽ gán giá trị luôn
+
+
+* Bài 12:
+    - Đối với thèn array của thèn TypeScript nếu muốn định nghĩa type nó giống hết như dùng number hay string thôi tuy nhiên chúng ta dùng dấu đóng mở ngoặc vuông
+    cho nhanh, đồng thời chúng ta có thể dùng mix type (nghĩa là dùng tùm lum kiểu dữ liệu trong 1 mảng)
+    
+    (string | number)[]
