@@ -37,3 +37,19 @@
     cho nhanh, đồng thời chúng ta có thể dùng mix type (nghĩa là dùng tùm lum kiểu dữ liệu trong 1 mảng)
     
     (string | number)[]
+
+* Bài 13:
+    - Kiểu tuple giúp chúng ta định nghĩa được 1 mảng hay rằng chúng ta định nghĩa được
+    1 cái biến mà ở đấy mình quy định kiểu giá trị cũng như rằng là trình tự hay kích thước của
+    biến đấy
+
+
+* Bài 14:
+    - Trong TypeScript, enum (viết tắt của "enumeration") là một kiểu dữ liệu đặc biệt cho phép bạn
+     xác định tập hợp các hằng số có tên. Enums giúp mã trở nên dễ đọc và duy trì hơn bằng cách 
+     sử dụng các tên có ý nghĩa thay vì các giá trị số hoặc chuỗi.
+    
+    - Định nghĩa:
+        + Enums là một cách để đặt tên cho các tập hợp các giá trị liên quan và chúng cung cấp một cách 
+        thuận tiện để làm việc với các nhóm các hằng số có liên quan. Enums có thể được định nghĩa bằng 
+        cách sử dụng từ khóa `enum`.
