@@ -38,13 +38,13 @@
     
     (string | number)[]
 
-* Bài 13:
+* Bài 13: 
     - Kiểu tuple giúp chúng ta định nghĩa được 1 mảng hay rằng chúng ta định nghĩa được
     1 cái biến mà ở đấy mình quy định kiểu giá trị cũng như rằng là trình tự hay kích thước của
     biến đấy
 
 
-* Bài 14:
+* Bài 14: Biến `enum`
     - Trong TypeScript, enum (viết tắt của "enumeration") là một kiểu dữ liệu đặc biệt cho phép bạn
      xác định tập hợp các hằng số có tên. Enums giúp mã trở nên dễ đọc và duy trì hơn bằng cách 
      sử dụng các tên có ý nghĩa thay vì các giá trị số hoặc chuỗi.
@@ -53,3 +53,9 @@
         + Enums là một cách để đặt tên cho các tập hợp các giá trị liên quan và chúng cung cấp một cách 
         thuận tiện để làm việc với các nhóm các hằng số có liên quan. Enums có thể được định nghĩa bằng 
         cách sử dụng từ khóa `enum`.
+
+
+*Bài 15: `TypeScript Any Type`
+    - TypeScript cung cấp kiểu any để cho phép bạn làm việc với các giá trị có thể có bất kỳ kiểu nào. 
+    Điều này đặc biệt hữu ích trong các tình huống mà bạn không biết trước kiểu dữ liệu chính xác, 
+    chẳng hạn như khi làm việc với dữ liệu từ các API hoặc thư viện bên ngoài.
