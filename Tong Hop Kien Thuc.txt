@@ -56,6 +56,16 @@
 
 
 *Bài 15: `TypeScript Any Type`
-    - TypeScript cung cấp kiểu any để cho phép bạn làm việc với các giá trị có thể có bất kỳ kiểu nào. 
+    - TypeScript cung cấp kiểu `any` để cho phép bạn làm việc với các giá trị có thể có bất kỳ kiểu nào. 
     Điều này đặc biệt hữu ích trong các tình huống mà bạn không biết trước kiểu dữ liệu chính xác, 
     chẳng hạn như khi làm việc với dữ liệu từ các API hoặc thư viện bên ngoài.
+
+    - Giới thiệu về `any`:
+        + `any` là một kiểu dữ liệu động, tương tự như kiểu Object trong JavaScript.
+        + Sử dụng `any` loại bỏ sự kiểm tra kiểu của TypeScript, cho phép bạn gán và sử dụng giá trị mà không gặp lỗi kiểu.
+        + Nó hữu ích trong các trường hợp bạn cần tạm thời vô hiệu hóa kiểm tra kiểu hoặc làm việc với các giá trị không xác định.
+    
+
+    -Lưu ý khi sử dụng `any`:
+        + Sử dụng có kiểm soát: `any` có thể làm mất đi lợi ích chính của TypeScript là kiểm tra kiểu tĩnh. Do đó, nên sử dụng any một cách hạn chế và có kiểm soát.
+        + Khi cần sự linh hoạt: any hữu ích khi làm việc với các giá trị không xác định, nhưng khi có thể, hãy chuyển sang các kiểu cụ thể hơn để tận dụng kiểm tra kiểu của TypeScript.
