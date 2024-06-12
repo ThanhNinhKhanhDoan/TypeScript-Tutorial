@@ -72,3 +72,22 @@
 
 
 * Bài 16: `TypeScript Void Type`
+    - TypeScript là một ngôn ngữ lập trình phát triển từ JavaScript với nhiều tính năng mạnh mẽ, trong đó 
+    có hệ thống kiểu tĩnh. Một trong những kiểu dữ liệu trong TypeScript là void. Kiểu void thường 
+    được sử dụng để biểu thị rằng một hàm không trả về giá trị nào.
+
+    - Khi nào sử dụng void:
+        + Hàm không trả về giá trị: Khi bạn viết một hàm không trả về giá trị, bạn có thể khai báo kiểu trả về của hàm là void.
+        + Hàm chỉ thực hiện một số hành động: Những hàm như log thông tin, gửi dữ liệu đến một server mà không cần trả về bất kỳ giá trị nào.
+
+
+
+* Bài 17: TypeScript Data Type - Never
+    - Trong TypeScript, never là một kiểu dữ liệu đặc biệt dùng để chỉ những giá trị không bao giờ xảy ra. never thường được sử dụng để:
+        + Chỉ các hàm không bao giờ trả về (chẳng hạn như các hàm ném ra ngoại lệ hoặc các hàm có vòng lặp vô tận).
+        + Chỉ các biến mà về lý thuyết không thể có giá trị nào.
+
+    - Khi nào sử dụng never? :
+        + Hàm ném ra ngoại lệ: Khi một hàm luôn ném ra ngoại lệ và không bao giờ hoàn thành việc thực thi bình thường.
+        + Hàm có vòng lặp vô tận: Khi một hàm có vòng lặp vô tận mà không có cách nào để thoát khỏi vòng lặp.
+        
