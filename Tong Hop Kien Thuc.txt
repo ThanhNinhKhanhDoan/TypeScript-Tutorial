@@ -69,3 +69,6 @@
     -Lưu ý khi sử dụng `any`:
         + Sử dụng có kiểm soát: `any` có thể làm mất đi lợi ích chính của TypeScript là kiểm tra kiểu tĩnh. Do đó, nên sử dụng any một cách hạn chế và có kiểm soát.
         + Khi cần sự linh hoạt: any hữu ích khi làm việc với các giá trị không xác định, nhưng khi có thể, hãy chuyển sang các kiểu cụ thể hơn để tận dụng kiểm tra kiểu của TypeScript.
+
+
+* Bài 16: `TypeScript Void Type`

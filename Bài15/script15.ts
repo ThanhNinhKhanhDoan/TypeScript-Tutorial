@@ -7,7 +7,6 @@ console.log("---check randomValue: ", randomValue);
 
 randomValue = true;
 console.log("---check randomValue: ", randomValue);
-
 /* 
 Trong ví dụ `này`:
     - Biến randomValue được khai báo với kiểu `any`.
@@ -25,7 +24,6 @@ function logValue(value: any): void {
 logValue(true)
 logValue("TNKD")
 logValue({ key: "ĐoanTrang" })
-
 /*
 Trong ví dụ `này`:
     - Hàm logValue nhận một tham số có kiểu `any`.
