@@ -102,3 +102,19 @@
 
 * Bài 19: TypeScript Type Aliases
     - Định danh kiểu type theo cách mình mong muốn
+
+
+* Bài 20 : if else
+
+* Bài 21: switch case
+
+* Bài 22: Vòng Lặp For
+    - Vòng lặp for là một cấu trúc điều khiển lặp lại một khối mã cho đến khi một điều kiện nhất định 
+       được thỏa mãn. TypeScript, với tính năng kiểm tra kiểu mạnh mẽ, cung cấp khả năng sử dụng vòng 
+        lặp for một cách an toàn và hiệu quả.
+
+* Bài 23: Vòng Lặp While
+    - Vòng lặp while là một cấu trúc điều khiển lặp lại một khối mã miễn là một điều kiện nhất định còn 
+    đúng. Điều này có nghĩa là khối mã sẽ tiếp tục thực hiện cho đến khi điều kiện trở thành sai. Vòng 
+    lặp while thường được sử dụng khi bạn không biết trước số lần lặp cần thiết, thay vào đó, bạn dựa 
+    vào một điều kiện để kết thúc vòng lặp.
