@@ -120,8 +120,11 @@
     vào một điều kiện để kết thúc vòng lặp.
 
 
-Bài 24: Vòng Lặp Do...While
+* Bài 24: Vòng Lặp Do...While
     - Vòng lặp do...while trong TypeScript là một cấu trúc điều khiển lặp lại một khối mã ít nhất một 
     lần, sau đó tiếp tục lặp lại khối mã đó miễn là điều kiện xác định là đúng. Khác với vòng lặp while, 
     vòng lặp do...while luôn thực hiện khối mã bên trong ít nhất một lần, ngay cả khi điều kiện ban 
     đầu là sai.
+
+
+* Bài 25: TypeScript Break
