@@ -144,3 +144,6 @@
     sang lần lặp tiếp theo. Nó rất hữu ích khi bạn muốn bỏ qua các phần tử không thỏa mãn điều kiện 
     nào đó trong vòng lặp. Sử dụng continue giúp mã của bạn trở nên ngắn gọn và dễ đọc hơn khi
     bạn muốn bỏ qua các lần lặp không cần thiết. 
+
+
+* Bài 27_28: Function

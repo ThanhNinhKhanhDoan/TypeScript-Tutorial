@@ -2,8 +2,14 @@ for (let index = 0; index < 9; index++) {
     if (index % 2 === 1) {
         continue;
     }
-    console.log("--> check index = ", index)
+    console.log("--> check index = ", index);
+    // Vòng lặp sẽ in ra giá trị của index từ 0 đến 8 (do index < 9).
+    // Các giá trị của index mà là số lẻ (1, 3, 5, 7) sẽ bị bỏ qua do lệnh continue.
 }
+
+
+
+
 
 
 // Sử dụng continue trong vòng lặp for
