@@ -195,10 +195,15 @@
 
 
 
-Bài 32: TypeScript Function Overloading
+* Bài 32: TypeScript Function Overloading:
     - Để định nghĩa một hàm với các chữ ký khác nhau, bạn cần:
         1. Định nghĩa các chữ ký (overload signatures) ở đầu.
         2. Định nghĩa một chữ ký thực thi duy nhất (implementation signature) chứa logic của hàm.
-    
+
+
 
     
+* Bài 33: Class:
+    - Classes là một tính năng của TypeScript (cũng như JavaScript) cho phép bạn định nghĩa các đối 
+    tượng với các thuộc tính (properties) và phương thức (methods). Classes giúp tổ chức mã nguồn
+    theo kiểu hướng đối tượng, làm cho mã dễ hiểu, bảo trì và tái sử dụng hơn.
