@@ -192,3 +192,13 @@
     - Rest parameters cho phép bạn nhận một số lượng đối số không xác định dưới dạng một mảng.
     - Cú pháp: Sử dụng ba dấu chấm (...) theo sau bởi tên tham số.
     - Ứng dụng: Hữu ích khi viết các hàm cần xử lý một số lượng đối số thay đổi.
+
+
+
+Bài 32: TypeScript Function Overloading
+    - Để định nghĩa một hàm với các chữ ký khác nhau, bạn cần:
+        1. Định nghĩa các chữ ký (overload signatures) ở đầu.
+        2. Định nghĩa một chữ ký thực thi duy nhất (implementation signature) chứa logic của hàm.
+    
+
+    
