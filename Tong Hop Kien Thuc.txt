@@ -128,3 +128,19 @@
 
 
 * Bài 25: TypeScript Break
+    - Lệnh break trong TypeScript (và JavaScript) được sử dụng để ngay lập tức thoát ra khỏi vòng lặp 
+    hoặc câu lệnh switch. Khi break được thực thi, vòng lặp hoặc câu lệnh switch chứa nó sẽ dừng 
+    lại và chương trình sẽ tiếp tục thực hiện mã ngay sau vòng lặp hoặc câu lệnh switch đó.
+
+
+
+* Bài 26:  TypeScript Continue
+    - Lệnh continue trong TypeScript được sử dụng để bỏ qua phần còn lại của vòng lặp hiện tại và 
+    chuyển sang lần lặp tiếp theo. Khác với lệnh break, lệnh continue không thoát khỏi vòng lặp mà 
+    chỉ dừng thực hiện phần còn lại của khối lệnh trong lần lặp hiện tại và bắt đầu ngay lần lặp tiếp theo.
+
+
+    - Lệnh continue trong TypeScript cho phép bạn bỏ qua phần còn lại của vòng lặp hiện tại và chuyển 
+    sang lần lặp tiếp theo. Nó rất hữu ích khi bạn muốn bỏ qua các phần tử không thỏa mãn điều kiện 
+    nào đó trong vòng lặp. Sử dụng continue giúp mã của bạn trở nên ngắn gọn và dễ đọc hơn khi
+    bạn muốn bỏ qua các lần lặp không cần thiết. 
