@@ -147,3 +147,16 @@
 
 
 * Bài 27_28: Function
+
+
+* Bafi 29: TypeScript Optional Parameters ( Tham Số Tuỳ Chọn)
+    - Tham số tùy chọn cho phép bạn định nghĩa các hàm với các tham số có thể không cần thiết phải cung cấp.
+    - Cú pháp: Thêm dấu ? sau tên tham số trong khai báo hàm.
+    - Ứng dụng: Hữu ích trong nhiều tình huống khi một hoặc nhiều tham số không bắt buộc trong khi gọi hàm.
+    - Thứ tự của tham số: Các tham số tùy chọn phải được định nghĩa sau các tham số bắt buộc. Điều này giúp 
+        TypeScript có thể xác định chính xác các giá trị được truyền vào cho từng tham số.
+        + // Sai: tham số bắt buộc sau tham số tùy chọn
+            function incorrectOrder(a?: number, b: number): void { }
+
+        + // Đúng: tham số bắt buộc trước tham số tùy chọn
+            function correctOrder(a: number, b?: number): void { }
