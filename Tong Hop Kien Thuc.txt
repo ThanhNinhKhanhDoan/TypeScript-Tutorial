@@ -149,7 +149,7 @@
 * Bài 27_28: Function
 
 
-* Bafi 29: TypeScript Optional Parameters ( Tham Số Tuỳ Chọn)
+* Bài 29: TypeScript Optional Parameters ( Tham Số Tuỳ Chọn)
     - Tham số tùy chọn cho phép bạn định nghĩa các hàm với các tham số có thể không cần thiết phải cung cấp.
     - Cú pháp: Thêm dấu ? sau tên tham số trong khai báo hàm.
     - Ứng dụng: Hữu ích trong nhiều tình huống khi một hoặc nhiều tham số không bắt buộc trong khi gọi hàm.
@@ -160,3 +160,24 @@
 
         + // Đúng: tham số bắt buộc trước tham số tùy chọn
             function correctOrder(a: number, b?: number): void { }
+
+
+* Bài 30: TypeScript Default Parameters ( Tham Số Mặc Định)
+    - Trong TypeScript, các tham số mặc định (default parameters) cho phép bạn định nghĩa giá trị mặc
+     định cho các tham số của hàm. Nếu giá trị cho các tham số này không được cung cấp khi gọi hàm, 
+     thì giá trị mặc định sẽ được sử dụng. Điều này giúp bạn tránh việc phải kiểm tra và gán giá trị mặc 
+     định bên trong thân hàm.
+
+    
+    - Tham số mặc định giúp bạn định nghĩa giá trị mặc định cho các tham số của hàm.
+    - Cú pháp: Thêm = theo sau tên tham số và gán giá trị mặc định.
+    - Ứng dụng: Hữu ích khi bạn muốn các tham số của hàm có giá trị mặc định để tránh
+     kiểm tra và gán giá trị thủ công bên trong thân hàm.
+
+    - Lưu Ý:
+        + Thứ tự của tham số: Tham số mặc định có thể xuất hiện ở bất kỳ đâu, nhưng nếu có cả tham số
+        tùy chọn và tham số mặc định, thì tham số mặc định thường đi sau các tham số tùy chọn hoặc 
+        bắt buộc để tránh nhầm lẫn.
+
+        + Tính không thay đổi: Một khi đã định nghĩa giá trị mặc định, nếu tham số đó không được cung 
+        cấp khi gọi hàm, giá trị mặc định sẽ luôn được sử dụng.
