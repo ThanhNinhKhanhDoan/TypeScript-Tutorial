@@ -181,3 +181,14 @@
 
         + Tính không thay đổi: Một khi đã định nghĩa giá trị mặc định, nếu tham số đó không được cung 
         cấp khi gọi hàm, giá trị mặc định sẽ luôn được sử dụng.
+
+* Bài 31: TypeScript Rest Parameters (tham số dư)
+    - Trong TypeScript, rest parameters (tham số dư) cho phép bạn truyền vào một số lượng đối số không 
+    xác định cho một hàm. Rest parameters được đại diện bởi ba dấu chấm (...) theo sau bởi tên của 
+    tham số, và chúng được nạp vào một mảng. Điều này rất hữu ích khi bạn không biết trước số lượng
+    đối số mà hàm của bạn sẽ nhận.
+
+
+    - Rest parameters cho phép bạn nhận một số lượng đối số không xác định dưới dạng một mảng.
+    - Cú pháp: Sử dụng ba dấu chấm (...) theo sau bởi tên tham số.
+    - Ứng dụng: Hữu ích khi viết các hàm cần xử lý một số lượng đối số thay đổi.
