@@ -227,3 +227,11 @@
     chỉ có thể được gán giá trị một lần, tức là chỉ có thể đọc mà không thể thay đổi sau khi được khởi 
     tạo. Điều này giúp bảo vệ dữ liệu khỏi bị thay đổi không mong muốn sau khi đã được thiết lập.
 
+
+
+* Bài 36: Typescript Getters and Setters
+    - Trong TypeScript, getters và setters là các phương thức đặc biệt được sử dụng để truy cập và sửa đổi 
+    các giá trị thuộc tính của một đối tượng. Chúng cung cấp một cách để kiểm soát truy cập và xác 
+    thực dữ liệu khi truy cập hoặc cập nhật các thuộc tính của một lớp.
+        + Getters được sử dụng để lấy giá trị của một thuộc tính. Chúng được định nghĩa với từ khóa get.
+        + Setters được sử dụng để gán giá trị cho một thuộc tính. Chúng được định nghĩa với từ khóa set.
