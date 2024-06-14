@@ -219,3 +219,11 @@
             khai báo chúng. Không thể truy cập từ bên ngoài lớp hoặc từ các lớp con.
         + Protected: Các thành phần được khai báo là protected có thể được truy cập từ bên trong lớp 
             khai báo chúng và các lớp con (lớp kế thừa). Không thể truy cập từ bên ngoài lớp.
+
+
+
+* Bài 35: Readonly   
+    `readonly` trong TypeScript là một từ khóa dùng để chỉ định rằng một thuộc tính của một đối tượng 
+    chỉ có thể được gán giá trị một lần, tức là chỉ có thể đọc mà không thể thay đổi sau khi được khởi 
+    tạo. Điều này giúp bảo vệ dữ liệu khỏi bị thay đổi không mong muốn sau khi đã được thiết lập.
+
