@@ -207,3 +207,15 @@
     - Classes là một tính năng của TypeScript (cũng như JavaScript) cho phép bạn định nghĩa các đối 
     tượng với các thuộc tính (properties) và phương thức (methods). Classes giúp tổ chức mã nguồn
     theo kiểu hướng đối tượng, làm cho mã dễ hiểu, bảo trì và tái sử dụng hơn.
+
+
+* Bài 34: TypeScript Access Modifiers (Bộ điều chỉnh truy cập):
+    - Access Modifiers (Bộ điều chỉnh truy cập) trong TypeScript là các từ khóa được sử dụng để xác định 
+    mức độ truy cập của các thành phần như thuộc tính và phương thức trong một lớp. TypeScript hỗ 
+    trợ ba loại Access Modifiers:
+        + Public: Các thành phần được khai báo là public có thể được truy cập từ bất kỳ đâu.
+            Đây là giá trị mặc định nếu không khai báo rõ ràng Access Modifier.
+        + Private: Các thành phần được khai báo là private chỉ có thể được truy cập từ bên trong lớp 
+            khai báo chúng. Không thể truy cập từ bên ngoài lớp hoặc từ các lớp con.
+        + Protected: Các thành phần được khai báo là protected có thể được truy cập từ bên trong lớp 
+            khai báo chúng và các lớp con (lớp kế thừa). Không thể truy cập từ bên ngoài lớp.
