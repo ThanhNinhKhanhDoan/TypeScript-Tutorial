@@ -1,34 +1,10 @@
+# print("dừng tool")
+# main.exit()
 info = info_acc(geo='vn', type_email = [""])
 # simcode = TowNdLine("6865cd8dcddaa5b5a003ea7145cbe031","373")
 # simcode = Api_hcotp_com("VWNpQjEySTcxSEpwbHBEY29UcCtJTWVEWEFBRGhWcCtGcGRoVzlGZUExQT0","26")
 # simcode = Api_mmotp_com("mZT38UYlE4h40s7JtafJltMrSxlKCwe4iISy","663dcacc597f8bd5f212c610")
 simcode = Api_sim24_cc("8n2nuq8dolh69t5f9cshvxlgp5ntvy8v","Payoneer")
-
-
-def get_mail_po(type_get = "link", index = 0, search = "Mã xác minh của bạn từ Payoneer", email = "", passwd = ""):
-	if type_get != "code":
-		type_get = "link"
-	# URL của API
-	url = f"http://127.0.0.1:10002/{type_get}"
-
-	# Tham số truy vấn
-	params = {
-		"count": 10,
-		"index": index,
-		"search": search,
-		"username": email,
-		"password": passwd
-	}
-
-	response = requests.get(url, params=params)
-	json_data = response.json()
-	if json_data["stt"]:
-		return json_data["data"]
-	else:
-		return False
-		
-
-
 
 
 def tool_atfc_pro(phone):
@@ -60,6 +36,67 @@ def tool_atfc_pro(phone):
 
 
 
+
+
+
+
+def get_mail_po(type_get = "link", index = 0, search = "Mã xác minh của bạn từ Payoneer", email = "", passwd = ""):
+	if type_get != "code":
+		type_get = "link"
+	# URL của API
+	url = f"http://127.0.0.1:10002/{type_get}"
+
+	# Tham số truy vấn
+	params = {
+		"count": 10,
+		"index": index,
+		"search": search,
+		"username": email,
+		"password": passwd
+	}
+
+	response = requests.get(url, params=params)
+	json_data = response.json()
+	if json_data["stt"]:
+		return json_data["data"]
+	else:
+		return False
+		
+
+def get_link_po(type_get = "link", index = 0, search = "Mã xác minh của bạn từ Payoneer", email = "", passwd = ""):
+	if type_get != "code":
+		type_get = "link"
+	# URL của API
+	url = f"http://127.0.0.1:10002/{type_get}"
+
+	# Tham số truy vấn
+	params = {
+		"count": 10,
+		"index": index,
+		"search": search,
+		"username": email,
+		"password": passwd
+	}
+
+	response = requests.get(url, params=params)
+	json_data = response.json()
+	if json_data["stt"]:
+		return json_data["data"]
+	else:
+		return False
+
+
+
+
+
+
+
+
+
+
+
+
+
 class GOGL:
 	def __init__(self):
 		self.telegram_bot_token = "6062669164:AAHsr9hmjkpr4qLvFIuW0wO0K5IflbIA2kw"
@@ -70,49 +107,70 @@ class GOGL:
 		
 		# --------DB 100k Sim Reg--------#
 		self.Sim_Reg = "pov8@gmail.com/Payoneer-V2/Data/100K-Sim"
-        self.API_Sim_Reg = Api_database(token, self.Sim_Reg, "")
-		
-		# --------DB Acc Reg Thành Công--------#
-		self.Acc_Reg_Thanh_Cong = "pov8@gmail.com/Payoneer-V2/Acc-Thanh-Cong"
-		self.API_Acc_Reg_Thanh_Cong = Api_database(token, self.Acc_Reg_Thanh_Cong, "")
+		self.API_Sim_Reg = Api_database(token, self.Sim_Reg, "")
+
 		
 		# --------DB Bank--------#
-		self.Bank_Reg = "pov8@gmail.com/Payoneer-V2/Data/Bank/Bank-Hai"
-		# self.Bank_Reg = "pov8@gmail.com/Payoneer-V2/Data/Bank/Bank-Tuan"
-		# self.Bank_Reg = "pov8@gmail.com/Payoneer-V2/Data/Bank/Bank-Y"
+# 		self.Bank_Reg = "pov8@gmail.com/Payoneer-V2/Data/Bank/Bank-Hai"
+# 		self.Bank_Reg = "pov8@gmail.com/Payoneer-V2/Data/Bank/Bank-Tuan"
+# 		self.Bank_Reg = "pov8@gmail.com/Payoneer-V2/Data/Bank/Bank-Y"
+		self.Bank_Reg = "pov8@gmail.com/Payoneer-V2/Data/Bank/Be-Hao"
 		
-                        # --------API--------#
-		self.API_Bank_Reg = Api_database(token, self.Bank_Reg, "")
-		
+						# --------API--------#
+		# self.API_Bank_Reg = Api_database(token, self.Bank_Reg, "")
+# 		self.Bank_Reg = "pov8@gmail.com/Payoneer-V2/Go-Tai-Khoan/Tai-Khoan-Go-Loi"
 		
 		# --------DB Proxy Reg--------#
-		self.Proxy_Reg = "pov8@gmail.com/Payoneer-V2/Data/Proxy/US-GB-CA-MX-DE-IT"
-# 		self.Proxy_Reg = "pov8@gmail.com/Payoneer-V2/Data/Proxy/US-GB-CA"
+# 		self.Proxy_Reg = "pov8@gmail.com/Payoneer-V2/Data/Proxy/US-GB-CA-MX-DE-IT"
+		self.Proxy_Reg = "pov8@gmail.com/Payoneer-V2/Data/Proxy/US-GB-CA"
 # 		self.Proxy_Reg = "pov8@gmail.com/Payoneer-V2/Data/Proxy/US"
 
-                        # --------API--------#
-        self.API_Proxy_Reg = Api_database(token, self.Proxy_Reg, "")
+						# --------API--------#
+		# self.API_Proxy_Reg = Api_database(token, self.Proxy_Reg, "")
 		
 		# --------DB Mail Reg--------#
 		self.Mail_Reg = "pov8@gmail.com/Payoneer-V2/Mail-Reg-DV"
 		self.Mail_Reg_Pending = "pov8@gmail.com/Payoneer-V2/Pending-Mail-Reg"
 		self.Mail_Reg_Lap = "pov8@gmail.com/Payoneer-V2/Mail-Lap"
 		
-                        # --------API--------#
+						# --------API--------#
 		self.API_Mail = Api_database(token, self.Mail_Reg, "")
 		self.API_Mail_Reg_Pending = Api_database(token, self.Mail_Reg_Pending, "")
 		self.API_Mail_Reg_Lap = Api_database(token, self.Mail_Reg_Lap, "")
 		
-		# --------DB Xác Nhận Link--------#
+
+
+
+
+				
+		# ---------------------------------DB Acc Reg Thành Công--------------------------#
+		self.Acc_Reg_Thanh_Cong = "pov8@gmail.com/Payoneer-V2/Acc-Thanh-Cong"
+						# --------API--------#
+		self.API_Acc_Reg_Thanh_Cong = Api_database(token, self.Acc_Reg_Thanh_Cong, "")
+
+
+
+
+
+		# ---------------------------------------DB Xác Nhận Link---------------------------------------#
+		self.Db_Pending_Xac_Nhan_Link = "pov8@gmail.com/Payoneer-V2/DB-Xac-Nhan-Link/Pending-Xac-Nhan-Link"
 		self.Db_Xac_Nhan_Link_Thanh_Cong = "pov8@gmail.com/Payoneer-V2/DB-Xac-Nhan-Link/Xac-Nhan-Thanh-Cong"
 # 		self.Db_Xac_Nhan_Link_Thanh_Cong = "pov8@gmail.com/Payoneer-V2/DB-Xac-Nhan-Link/Xac-Nhan-Thanh-Cong-2"
 
-                        # --------API--------#
+
+		
+
+
+						# --------API--------#
+		self.API_Db_Pending_Xac_Nhan_Link = Api_database(token, self.Db_Pending_Xac_Nhan_Link, "")
 		self.API_Db_Xac_Nhan_Link_Thanh_Cong = Api_database(token, self.Db_Xac_Nhan_Link_Thanh_Cong, "")
+		
 	
 
 
-		# --------DB Ver Code Mail--------#
+		# ------------------------------------------DB Ver Code Mail------------------------------------------------#
+		
+		self.Db_Pending_Tai_Khoan_Ver_Code = "pov8@gmail.com/Payoneer-V2/DB-Ver-Code-Mail/Pending-Tai-Khoan-Ver-Code"
 		self.Db_One_Or_More_Details_Is_Incorrect = "pov8@gmail.com/Payoneer-V2/DB-Ver-Code-Mail/Acc-Bi-One-Or-More-Details-Is-Incorrect"
 		self.Db_Mail_Chua_Dang_Ky_Thanh_Cong = "pov8@gmail.com/Payoneer-V2/DB-Ver-Code-Mail/Mail-Chua-Dang-Ky-Thang-Cong"
 		self.Db_Tai_Khoan_Ver_Code_Bi_Khoa = "pov8@gmail.com/Payoneer-V2/DB-Ver-Code-Mail/Tai-Khoan-Ver-Code-Bi-Khoa"
@@ -120,16 +178,19 @@ class GOGL:
 		self.Db_Acc_Ver_Khonggggg_Co_Tick_Xanh = "pov8@gmail.com/Payoneer-V2/DB-Ver-Code-Mail/Acc-Ver-Khonggggg-Co-Tick-Xanh"
 		self.Db_Acc_Ver_Done_Co_Tick_Xanh = "pov8@gmail.com/Payoneer-V2/DB-Ver-Code-Mail/Acc-Ver-Done-Co-Tick-Xanh"
 		
-                        # --------API--------#
-        self.API_Db_One_Or_More_Details_Is_Incorrect = Api_database(token, self.Db_One_Or_More_Details_Is_Incorrect, "")
+		self.Db_Acc_Can_Ver_lai = "pov8@gmail.com/Payoneer-V2/Ver-Code-Lai-Acc-Bi-Loi/Acc-Can-Ver-Lai-Code"
+		self.Db_Acc_Can_Check_Lai_Tick_Xanh = "pov8@gmail.com/Payoneer-V2/Check-Acc-Khong-Co-Tick-Xanh/Acc-Can-Check"
+						# --------API--------#
+		self.API_Db_Pending_Tai_Khoan_Ver_Code = Api_database(token, self.Db_Pending_Tai_Khoan_Ver_Code, "")
+		self.API_Db_One_Or_More_Details_Is_Incorrect = Api_database(token, self.Db_One_Or_More_Details_Is_Incorrect, "")
 		self.API_Db_Mail_Chua_Dang_Ky_Thanh_Cong = Api_database(token, self.Db_Mail_Chua_Dang_Ky_Thanh_Cong, "")
 		self.API_Db_Tai_Khoan_Ver_Code_Bi_Khoa = Api_database(token, self.Db_Tai_Khoan_Ver_Code_Bi_Khoa, "")
-        self.API_Db_Mail_Ver_Khong_Co_Code = Api_database(token, self.Db_Mail_Ver_Khong_Co_Code, "")
+		self.API_Db_Mail_Ver_Khong_Co_Code = Api_database(token, self.Db_Mail_Ver_Khong_Co_Code, "")
 		self.API_Db_Acc_Ver_Khonggggg_Co_Tick_Xanh = Api_database(token, self.Db_Acc_Ver_Khonggggg_Co_Tick_Xanh, "")
 		self.API_Db_Acc_Ver_Done_Co_Tick_Xanh = Api_database(token, self.Db_Acc_Ver_Done_Co_Tick_Xanh, "")
 
-		
-		
+		self.API_Db_Acc_Can_Ver_lai = Api_database(token, self.Db_Acc_Can_Ver_lai, "")
+		self.API_Db_Acc_Can_Check_Lai_Tick_Xanh = Api_database(token, self.Db_Acc_Can_Check_Lai_Tick_Xanh, "")
 		
 		
 		
@@ -202,6 +263,9 @@ class GOGL:
 		if self.Browser.create() == False:
 			printe("Không tạo được profile")
 			main.exit()
+		
+		self.Browser.size(1920,1080)
+			
 		self.proxy = self.proxys["text_full"]
 		if self.Browser.proxy(self.proxys["text_full"]) == False:
 			printe("KHÔNG KẾT NỐI ĐƯỢC PROXY")
@@ -240,15 +304,24 @@ class GOGL:
 	
 	
 	def get_phone_db(self):
+		self.phones = Api_database(token, self.Sim_Reg, "").findOne(wheres = {}, key_search = "text_full", search = "", delete = False, hide = True, reset_hide = True).datas
+		self.phone = self.phones["text_full"]
+		if len(self.phone) == 0:
+			printe("Hết Sđt")
+			main.exit()
+		
 
-		TDev.get(dbToken = self.Sim_Reg)
-		self.phone = TDev.text
-		if self.phone == None:
-			 printe("Hết Sđt")
-			 main.exit()		
-			
 	
+
+
+
+
+
+
+
 	def main_tool(self):
+		printx("dừng tool")
+		main.exit()
 		self.driver.Goto("https://payouts.payoneer.com/partners/or.aspx?pid=YOYIZC74IO2s4KZQp7tgsw%3D%3D&BusinessLine=7&Volume=below-2000&web_interaction=webpage_accounts&from=login&langid=21&locale=vi&_gl=1*rryavz*_ga*NjA4OTQ0OTMxLjE3MTc0MjAzODA.*_ga_G4G3RX5S55*MTcxNzQyMDM3OS4xLjEuMTcxNzQyMDM5NC4wLjAuMzI5OTM4NTM4")
 # 		self.driver.Goto("https://payouts.payoneer.com/partners/or.aspx?pid=YOYIZC74IO2s4KZQp7tgsw%3d%3d&BusinessLine=7&Volume=below-2000&web_interaction=webpage_accounts|website_traffic&langid=21&locale=vi")
 		###### nhạp info
@@ -297,7 +370,7 @@ class GOGL:
 		self.mail_user = self.mails[0]
 		self.mail_pass = self.mails[1]
 		# lưu vào db pending
-		self.Mail_Reg_Pending.create_database(self.InputMails["text_full"], live = 0)
+		self.API_Mail_Reg_Pending.create_database(self.InputMails["text_full"], live = 0)
 		
 		
 		
@@ -311,7 +384,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Email` thất bại")
 			main.exit()
@@ -328,7 +401,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Nhập lại email` thất bại")
 			main.exit()
@@ -342,7 +415,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Nhập `Năm sinh` thất bại")
 			main.exit()
@@ -354,7 +427,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Nhập `Tháng sinh` thất bại")
 			main.exit()
@@ -373,24 +446,25 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Ngày sinh` thất bại")
 			main.exit()
 
-		time.sleep(5)
+		time.sleep(2)
 
 		if self.driver.Set_xpath(f"//input[@id='txtRetypeEmail']", 20).isElement:
 			isAction = False
 			for _ in range(5):
 				if self.driver.Get_xpath(0).Click().is_click:
+					self.driver.Sleep(1)
 					self.driver.ENTER()
 					isAction =  True
 					break
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Tiếp Tục` thất bại")
 			main.exit()	
@@ -403,7 +477,7 @@ class GOGL:
 		
 		if self.driver.Set_xpath("(//div[contains(.,'Chúng tôi chỉ cho phép một tài khoản mỗi người. Vui lòng liên hệ với chúng tôi để được trợ giúp với tài khoản hiện có của bạn.')])[14]", 10).isElement:
 			printe("Mail Lặppppp Lạiiiiiiiii!!!!!!")
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail_Reg_Lap.create_database(self.mail, live = 0)
 			
 			main.exit()
@@ -439,16 +513,16 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Quốc gia` thất bại")
 			main.exit()
 
 		
 		
-		if self.driver.Set_xpath("//input[@id='inputAddress']", 20).isElement:
+		if self.driver.Set_xpath("//input[@id='inputAddress']", 10).isElement:
 			isAction = False
-			for _ in range(3):
+			for _ in range(1):
 				if self.driver.Get_xpath(0).Click().is_click:
 					self.driver.Press(self.dia_chi)
 					isAction =  True
@@ -456,9 +530,9 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
-			printe("Click `Địa chỉ1` thất bại")
+			printe("Click `Địa chỉ11` thất bại")
 			main.exit()
 		
 		
@@ -468,7 +542,7 @@ class GOGL:
 		if self.driver.Set_xpath("//div[contains(@class,'OtherAddressOption')]", 20).isElement:
 			self.driver.Get_xpath(0).Click()
 		else:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `OtherAddressOption` thất bại")
 			main.exit()
@@ -493,7 +567,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Địa chỉ2` thất bại")
 			main.exit()
@@ -516,7 +590,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Thành Phố` thất bại")
 			main.exit()
@@ -534,7 +608,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `zipcode` thất bại")
 			main.exit()
@@ -543,17 +617,18 @@ class GOGL:
 
 
 
-
+		
+		######################## Số Điện Thoại 100k Sim ################################
 		if self.driver.Set_xpath("//input[@id='AccountPhoneNumber_num']", 20).isElement:
 			isAction = False
 			for _ in range(5):
 				if self.driver.Get_xpath(0).Click().is_click:
 					self.get_phone_db()
 					if self.phone != False:
-						for _ in range(15):
+						for _ in range(2):
 							self.driver.RIGHT()
 							time.sleep(0.1)
-						for _ in range(15):
+						for _ in range(2):
 							self.driver.BACKSPACE()
 							time.sleep(0.1)
 						self.driver.Press(self.phone)
@@ -564,13 +639,42 @@ class GOGL:
 		if self.phone == False:
 			printe("Hết số điện thoại từ API.")
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Phone` thất bại")
 			main.exit()
-		
-		
 
+
+
+
+		################### Số Điện Thoại Site Số #########################
+		
+# 		if self.driver.Set_xpath("//input[@id='AccountPhoneNumber_num']", 20).isElement:
+# 			isAction = False
+# 			for _ in range(5):
+# 				if self.driver.Get_xpath(0).Click().is_click:
+# 					self.phone = False
+# 					self.phone = simcode.buyOtp()
+# 					if self.phone != False:
+# 						for _ in range(2):
+# 							self.driver.RIGHT()
+# 							time.sleep(0.1)
+# 						for _ in range(2):
+# 							self.driver.BACKSPACE()
+# 							time.sleep(0.1)
+# 						self.driver.Press(self.phone)
+# 						isAction =  True
+# 						break
+# 		else:
+# 			isAction =  False
+# 		if self.phone == False:
+# # 			self.bot_telegrams(self.chat_id, "HẾT SỐ ĐIỆN THOẠI !!!.")
+# 			printe("Hết số điện thoại từ API.")
+# 		if isAction == False:
+# 			self.API_Mail_Reg_Pending.deleteId()
+# 			self.API_Mail.create_database(self.mail, live = 0)
+# 			printe("Click `Phone` thất bại")
+# 			main.exit()
 		
 				
 				
@@ -580,6 +684,9 @@ class GOGL:
 		############-PHONE------#######################
 		###############################################
 		###############################################
+		
+		################### Code 100k Sim ##########################
+		
 		if self.driver.Set_xpath("//a[contains(.,'Gửi mã')]", 20).isElement:
 			isAction = False
 			for _ in range(5):
@@ -589,21 +696,21 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Gửi code` thất bại")
 			main.exit()
 		
 
 		code = False
-		for _ in range(30):
+		for _ in range(20):
 			time.sleep(5)
 			code = tool_atfc_pro(self.phone)
 			if code != False:
 				break
 		if code == False:
 			printe("Không lấy được code sđt")
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			main.exit()
 		code = str(code)
@@ -618,14 +725,97 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			TDev.delete()
-			TDev.set(dbToken = self.mail_reg, value = self.mail)
+			self.API_Mail_Reg_Pending.deleteId()
+			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Nhập code` thất bại")
 			main.exit()
 		###############################################
 		############-PHONE------#######################
 		###############################################
 		###############################################
+		
+		############## Code Site Số###########################
+# 		if self.driver.Set_xpath("//a[contains(.,'Gửi mã')]", 20).isElement:
+# 			isAction = False
+# 			for _ in range(5):
+# 				if self.driver.Get_xpath(0).Click().is_click:
+# 					isAction =  True
+# 					break
+# 		else:
+# 			isAction =  False
+# 		if isAction == False:
+# 			self.API_Mail_Reg_Pending.deleteId()
+# 			self.API_Mail.create_database(self.mail, live = 0)
+# 			printe("Click `Gửi code` thất bại")
+# 			main.exit()
+		
+
+# 		code = False
+# 		for _ in range(20):
+# 			time.sleep(5)
+# 			code = simcode.getCode()
+# 			if code != False:
+# 				break
+# 		if code == False:
+# 			printe("Không lấy được code sđt")
+# 			self.API_Mail_Reg_Pending.deleteId()
+# 			self.API_Mail.create_database(self.mail, live = 0)
+# # 			self.bot_telegram("KHÔNG LẤY ĐƯỢC CODE SĐT.")
+# # 			self.bot_telegrams(self.chat_id, "KHÔNG LẤY ĐƯỢC CODE SĐT.")
+# 			main.exit()
+# 		code = str(code)
+# 		printx("code SĐT: " +code)
+# 		if self.driver.Set_xpath("//input[@id='txtVerificationCode']", 20).isElement:
+# 			isAction = False
+# 			for _ in range(5):
+# 				if self.driver.Get_xpath(0).Click().is_click:
+# 					self.driver.Press(code)
+# 					isAction =  True
+# 					break
+# 		else:
+# 			isAction =  False
+# 		if isAction == False:
+# 			self.API_Mail_Reg_Pending.deleteId()
+# 			self.API_Mail.create_database(self.mail, live = 0)
+# 			printe("Click `Nhập code` thất bại")
+# 			main.exit()
+		
+
+
+		
+		time.sleep(2)
+		if self.driver.Set_xpath("//input[@id='txtVerificationCode']", 20).isElement:
+			isAction = False
+			for _ in range(5):
+				if self.driver.Get_xpath(0).Click().is_click:
+					for _ in range(7):
+						self.driver.RIGHT()
+						time.sleep(0.1)
+					for _ in range(7):
+						self.driver.BACKSPACE()
+						time.sleep(0.1)
+					self.driver.Press(code)
+					isAction =  True
+					break
+		else:
+			isAction =  False
+		if isAction == False:
+			self.API_Mail_Reg_Pending.deleteId()
+			self.API_Mail.create_database(self.mail, live = 0)
+			printe("Click `Nhập code` thất bại")
+			main.exit()
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		if self.driver.Set_xpath("//input[@id='ContactDetailsButton']", 20).isElement:
 			isAction = False
@@ -636,7 +826,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Tiếp tục` thất bại")
 			main.exit()
@@ -669,8 +859,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			TDev.deleteId()
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			main.exit()
 			
@@ -685,7 +874,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `mật khẩu` thất bại")
 			main.exit()
@@ -703,7 +892,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `Chọn câu hỏi bảo` thất bại")
 			main.exit()
@@ -719,7 +908,7 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `nhập câu trả lời` thất bại")
 			main.exit()
@@ -735,29 +924,36 @@ class GOGL:
 		else:
 			isAction =  False
 		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `nhập cmnd` thất bại")
 			main.exit()
 		
 		
-		
-		
-		
-		
+		time.sleep(2)
 		if self.driver.Set_xpath("//input[@id='AccountDetailsButton']", 20).isElement:
-			isAction = False
-			for _ in range(5):
-				if self.driver.Get_xpath(0).Scroll().Scroll_up(300).Click().is_click:
-					isAction =  True
-					break
+			self.driver.Get_xpath(0).Click()
+			printx("Click Tiếp Theo Sau Khi Nhập Cmnd Thành Công")
+			if self.driver.Set_xpath("//input[@id='AccountDetailsButton']", 20).isElement:
+				self.driver.Get_xpath(0).Click()
+				printx("Click Tiếp Theo Sau Khi Nhập Cmnd Thành Công")
 		else:
-			isAction =  False
-		if isAction == False:
-			self.Mail_Reg_Pending.deleteId()
+			self.API_Mail_Reg_Pending.deleteId()
 			self.API_Mail.create_database(self.mail, live = 0)
 			printe("Click `tiếp theo` thất bại")
-			main.exit()
+# 		if self.driver.Set_xpath("//input[@id='AccountDetailsButton']", 20).isElement:
+# 			isAction = False
+# 			for _ in range(5):
+# 				if self.driver.Get_xpath(0).Scroll().Scroll_up(300).Click().is_click:
+# 					isAction =  True
+# 					break
+# 		else:
+# 			isAction =  False
+# 		if isAction == False:
+# 			self.API_Mail_Reg_Pending.deleteId()
+# 			self.API_Mail.create_database(self.mail, live = 0)
+# 			printe("Click `tiếp theo` thất bại")
+# 			main.exit()
 		
 
 		
@@ -777,11 +973,11 @@ class GOGL:
 		
 		try:
 			# hàm get bank
-			self.InputBank = Api_database(token, self.Bank_Reg, "").findOne(wheres = {}, key_search = "text_full", search = "", delete = True, hide = True, reset_hide = True).datas
+			self.InputBank = Api_database(token, self.Bank_Reg, "").findOne(wheres = {}, key_search = "text_full", search = "", delete = False, hide = True, reset_hide = True).datas
 			if len(self.InputBank) == 0:
-				self.InputBank = Api_database(token, self.Bank_Reg, "").findOne(wheres = {}, key_search = "text_full", search = "", delete = True, hide = True, reset_hide = True).datas
+				self.InputBank = Api_database(token, self.Bank_Reg, "").findOne(wheres = {}, key_search = "text_full", search = "", delete = False, hide = True, reset_hide = True).datas
 				if len(self.InputBank) == 0:
-					self.Mail_Reg_Pending.deleteId()
+					self.Api_Mail_Reg_Pending.deleteId()
 					self.API_Mail.create_database(self.mail, live = 0)
 					printe("Hết bank")
 					main.exit()
@@ -868,11 +1064,13 @@ class GOGL:
 		time.sleep(5)
 		if self.driver.Set_xpath_text("Đang trong quá trình xem xét", 20).isElement:
 # 			self.text_acc = f"{self.Browser.path_file_cloud_backup}\t{self.mail_user}\t{self.password}\t{self.mail_pass}\t{self.cau_hoi_bao_mat_reg_value}\t{self.phone}\t{self.bank_ho_va_ten}\t{self.bank}\t"+self.lastname+" "+self.middlename+" "+self.firstname+f"\t{self.sn_day}-{self.sn_month}-{self.sn_year}"
-			self.text_acc = f"{self.Browser.path_file_cloud_backup}\t{self.mail_user}\t{self.password}\t{self.mail_pass}\t{self.cau_hoi_bao_mat_reg_value}\t{self.bank_ho_va_ten}\t{self.bank_number}\t{self.bank_name}\t"+self.lastname+" "+self.middlename+" "+self.firstname+f"\t{self.sn_day}-{self.sn_month}-{self.sn_year}\t{self.phone}\t{self.proxy}"
+			cookie = self.driver.get_cookies()
+			self.text_acc = f"{self.Browser.path_file_cloud_backup}\t{self.mail_user}\t{self.password}\t{self.mail_pass}\t{self.cau_hoi_bao_mat_reg_value}\t{self.bank_ho_va_ten}\t{self.bank_number}\t{self.bank_name}\t"+self.lastname+" "+self.middlename+" "+self.firstname+f"\t{self.sn_day}-{self.sn_month}-{self.sn_year}\t{self.phone}\t{self.proxy}\t{cookie}"
 			if self.Browser.backup_v2():
 				printx("\tMở Backup!!!")
 			# lưu vào db tài khoản thành công
-			Api_database(token, self.Acc_Reg_Thanh_Cong, "").create_database(self.text_acc, live = 1)
+			# Api_database(token, self.Acc_Reg_Thanh_Cong, "").create_database(self.text_acc, live = 1)
+			self.API_Acc_Reg_Thanh_Cong.create_database(self.text_acc, live = 1)
 			
 # 			TDev.set(dbToken = self.Acc_Reg_Thanh_Cong, value = self.text_acc)
 # 			self.bot_telegrams(text = f"""Tạo tài khoản thành công :
@@ -900,19 +1098,41 @@ class GOGL:
 		
 		
 		
-		time.sleep(200)
+		time.sleep(150)
+		self.API_Acc_Reg_Thanh_Cong.deleteId()
+		self.API_Db_Pending_Xac_Nhan_Link.create_database(self.text_acc, live = 1)
+
+		
+	
+		
+		# code = False
+		link = False
+		for _ in range(5):
+			link = get_link_po(type_get = "link",search = "Vui lòng xác minh email của bạn", email = self.mail_user, passwd = self.mail_pass)
+			if link != False:
+				break
+			time.sleep(10)
+		if code == False:
+			printw("Mail Không Có Link!!!!!")
+		# 	self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+		# 	self.Db_Mail_Ver_Khong_Co_Code.create_database(self.text_acc, live = 1)
+		# 	main.exit()
 		
 		
-		search = "Vui lòng xác minh email của bạn"
-		url_docmail = f"http://127.0.0.1:10000/api/hotmail?username=admin&password=123456&mail_username={self.mail_user}&mail_password={self.mail_pass}&type_find=title&result=body&search={search}"
-# 		url_docmail = f"http://localhost:10001/findMail_v2?server=imap-mail.outlook.com&folder=inbox&unread=0&user={self.mail_user}&passwd={self.mail_pass}&email=&title={search}"
-		
-		
+		printx("Link Oke ")
+
+
+
+
+
+
+
+
 		
 		is_mail = False
 		for _ in range(5):
 			time.sleep(10)
-			self.driver.Goto(url_docmail)
+			self.driver.Goto(link)
 			if self.driver.Set_xpath_attr("div","id","sofin_body", 6).isElement:
 				printe("Chưa Có Xác Nhận Mail!!!")
 				pass
@@ -925,10 +1145,11 @@ class GOGL:
 # 			main.exit()
 		time.sleep(5)
 		isAction = False
-		if self.driver.Set_xpath("//span[@class='btn-inner']", 20).isElement:
+		if self.driver.Set_xpath("//span[@class='btn-inner']", 10).isElement:
 			for _ in range(5):
 				if self.driver.Get_xpath(0).Click().is_click:
 					isAction =  True
+					printx("Click Xác Nhận Mail Thành Công!")
 					break
 		if isAction == False:
 			printe("Chưa Có Mail Xác Nhận!")
@@ -936,8 +1157,8 @@ class GOGL:
 # 			TDev.set(dbToken = self.db_xac_nhan_chua_co_mail_xac_nhan, value = self.text_acc)
 # 			main.exit()
 		
-		time.sleep(5)
-		if self.driver.Set_xpath("//span[@class='btn-inner']", 20).isElement:
+# 		time.sleep(5)
+		if self.driver.Set_xpath("//span[@class='btn-inner']", 10).isElement:
 			self.driver.Get_xpath(0).element.click()
 			printe("Chưa Click Link, Click Lại!")
 		else:
@@ -945,16 +1166,17 @@ class GOGL:
 			pass
 		
 		time.sleep(5)
-		if self.driver.Set_xpath_text("You successfully verified your email", 120).isElement:
+		if self.driver.Set_xpath_text("You successfully verified your email", 10).isElement:
 			printx("Ver Acc Thành Công")
-			self.Acc_Reg_Thanh_Cong.delete()
-			self.Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
+# 			self.API_Db_Pending_Xac_Nhan_Link.deleteId()
+# 			self.API_Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
 		else:
 			printe("Acc Ver Thành Công Nhưng Die Proxy")
-			self.Acc_Reg_Thanh_Cong.delete()
-			self.Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
+# 			self.API_Db_Pending_Xac_Nhan_Link.deleteId()
+# 			self.API_Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
 			# thoát tool 
 # 			main.exit()
+
 		
 # 		main.exit()
 		
@@ -963,14 +1185,15 @@ class GOGL:
 		
 		
 		time.sleep(10)
-		
+		self.API_Db_Pending_Xac_Nhan_Link.deleteId()
+		self.API_Db_Pending_Tai_Khoan_Ver_Code.create_database(self.text_acc, live = 1)
 		
 		# ---------------------Ver Code--------------------#
 		
 		self.driver.Goto("https://login.payoneer.com")
+		time.sleep(5)
+		self.driver.Goto("https://login.payoneer.com")
 		time.sleep(10)
-# 		self.Sofin_playwright.Goto("https://login.payoneer.com")
-# 		time.sleep(10)
 		isAction = False
 		if self.driver.Set_xpath("//input[@id='username']", 20).isElement:
 			for _ in range(5):
@@ -980,59 +1203,75 @@ class GOGL:
 					break
 		if isAction == False:
 			printe("Click `Đăng nhập thất bại` thất bại")
-			self.Acc_Reg_Thanh_Cong.delete()
-			self.Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Acc_Can_Ver_lai.create_database(self.text_acc, live = 1)
 			main.exit()
 		
-		time.sleep(10)
+# 		time.sleep(10)
 		
 		if self.driver.Set_xpath("//span[contains(.,'One or more details is incorrect')]", 2).isElement:
 			printe("Acc Một hoặc nhiều chi tiết không chính xác")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_One_Or_More_Details_Is_Incorrect.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_One_Or_More_Details_Is_Incorrect.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 		
 		elif self.driver.Set_xpath("//span[contains(.,'It looks like you didn’t finish signing up. Go to the signup page and reenter your details.')]", 2).isElement:
 			printe("Mail Chưa Đăng Ký")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Mail_Chua_Dang_Ky_Thanh_Cong.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Mail_Chua_Dang_Ky_Thanh_Cong.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 		
 		
 		elif self.driver.Set_xpath("//span[contains(.,'Account blocked. Contact us.')]", 2).isElement:
 			printe("Acc Bị Khoá")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 		
 		elif self.driver.Set_xpath("//span[contains(.,'Account locked. To unlock it, reset your password.')]", 2).isElement:
 			printe("Acc Bị Khoá")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 		
 		
 		elif self.driver.Set_xpath("//span[contains(.,'Account locked. Try again in 30 minutes or reset your password.')]", 2).isElement:
 			printe("Acc Bị Khoá")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 		
 		elif self.driver.Set_xpath("//span[contains(.,'Your account was closed as some of your activity has gone against our Terms and Conditions. Learn more')]", 2).isElement:
 			printe("Acc Bị Khoá")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 
 		
 		else:
 			printx("Acc Cần Ver")
+		
+		
+# 		if self.driver.Set_xpath("//input[@id='username']", 20).isElement:
+# 			for _ in range(5):
+# 				if self.driver.Get_xpath(0).Click().is_click:
+# 					self.driver.Press(self.mail_user).Sleep(1).TAB().Sleep(1).Press(self.password).Sleep(1).ENTER()
+# 					isAction =  True
+# 					break
+# 		if isAction == False:
+# 			printe("Click `Đăng nhập thất bại` thất bại")
+# 			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+# 			self.API_Db_Pending_Xac_Nhan_Link.create_database(self.text_acc, live = 1)
+# 			main.exit()
+		
+		
+		
 		
 		
 		
@@ -1117,8 +1356,8 @@ class GOGL:
 					break
 		if isAction == False:
 			printe("Click `CẬP NHẬT NGAY` thất bại")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Acc_Can_Ver_lai.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 		
@@ -1136,8 +1375,8 @@ class GOGL:
 					break
 		if isAction == False:
 			printe("Click `Nhập Câu Hỏi 1` thất bại")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Acc_Can_Ver_lai.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 		
@@ -1151,8 +1390,8 @@ class GOGL:
 					break
 		if isAction == False:
 			printe("Click `Nhập Câu Hỏi 2` thất bại")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Acc_Can_Ver_lai.create_database(self.text_acc, live = 1)
 			main.exit()
 			
 			
@@ -1165,8 +1404,8 @@ class GOGL:
 					break
 		if isAction == False:
 			printe("Click `Nhập Câu Hỏi 3` thất bại")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Acc_Can_Ver_lai.create_database(self.text_acc, live = 1)
 			main.exit()
 
 		
@@ -1177,7 +1416,7 @@ class GOGL:
 
 			
 
-		time.sleep(220)
+		time.sleep(200)
 		
 		
 		
@@ -1194,16 +1433,14 @@ class GOGL:
 			time.sleep(10)
 		if code == False:
 			printw("Mail Không Có Code!!!!!")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Mail_Ver_Khong_Co_Code.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Mail_Ver_Khong_Co_Code.create_database(self.text_acc, live = 1)
 			main.exit()
 		
 		
 		printx("code nèeeeeeee <3333: " +code)
 # 		print(code)
-		
-		
-		
+
 		self.driver.Sleep(1).Press(code).Sleep(1).ENTER().Sleep(3).ENTER().Sleep(30)
 		
 		
@@ -1220,8 +1457,8 @@ class GOGL:
 		
 		if self.driver.Set_xpath_text("Tài khoản bị khóa", 10).isElement:
 			printe("Acc Bị Khoá")
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Tai_Khoan_Ver_Code_Bi_Khoa.create_database(self.text_acc, live = 1)
 			main.exit()
 		else:
 			printx("Acc Live")
@@ -1245,8 +1482,8 @@ class GOGL:
 			time.sleep(15)
 			if isAction == False:
 				printe("Click `Done` thất bại")
-		        self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-		        self.Db_Xac_Nhan_Link_Thanh_Cong.create_database(self.text_acc, live = 1)
+				self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+				self.API_Db_Acc_Can_Check_Lai_Tick_Xanh.create_database(self.text_acc, live = 1)
 				main.exit()
 		
 		
@@ -1257,10 +1494,15 @@ class GOGL:
 		
 		printe("Xác minh bước 3 thành công")
 
-		time.sleep(5)
+# 		time.sleep(5)
+		if self.driver.Set_xpath("//button[contains(.,'GOT IT')]", 10).isElement:
+			self.driver.Get_xpath(0).Click()
+			printx("Click vào `GOT IT` thành công!")
+			self.driver.Sleep(5)
+		else:
+			printe("Click `GOT IT` thất bại")
 		
-		
-		
+
 		
 		is_live = False
 		for _ in range(10):
@@ -1273,8 +1515,8 @@ class GOGL:
 			except:
 				pass
 		if is_live:
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Acc_Ver_Done_Co_Tick_Xanh.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Acc_Ver_Done_Co_Tick_Xanh.create_database(self.text_acc, live = 1)
 			printx("Lưu Acc Có Tick Xanh Thành Công <333333")
 # 			text_bot_tele = f"""Account OK, Chờ Xác Minh.\nName:  {self.ho_va_ten}\nBANK NUMBER : {self.bank_number}"""
 # 			self.bot_telegram(f"""Acc Có Tick Xanh Chờ Làm Tay :
@@ -1282,8 +1524,8 @@ class GOGL:
 # BANK NUMBER : {self.bank_number}
 # """)
 		else:
-			self.Db_Xac_Nhan_Link_Thanh_Cong.delete()
-			self.Db_Acc_Ver_Khonggggg_Co_Tick_Xanh.create_database(self.text_acc, live = 1)
+			self.API_Db_Pending_Tai_Khoan_Ver_Code.deleteId()
+			self.API_Db_Acc_Ver_Khonggggg_Co_Tick_Xanh.create_database(self.text_acc, live = 1)
 			printe("Lưu Acc Không Có Tick Xanh Thành Công!!!!")
 # 			text_bot_tele = f"""KHÔNG CÓ TÍCH XANH NHÉ : {self.ho_va_ten}\nBANK NUMBER : {self.bank_number}"""
 		
@@ -1294,8 +1536,4 @@ class GOGL:
 		
 		
 			
-		
-# 		time.sleep(2)
-		
-		main.exit()
 GOGL()
